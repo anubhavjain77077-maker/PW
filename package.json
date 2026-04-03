@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "dotenv": "^17.4.0",
+    "playwright": "^1.59.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.5.0",
+    "allure-commandline": "^2.38.1",
+    "allure-playwright": "^3.6.0"
+  },
+"scripts": {
+  "test": "playwright test",
+  "test:ui": "playwright test --ui",
+  "test:headed": "playwright test --headed",
+  "test:debug": "playwright test --debug",
+  "report": "playwright show-report",
+  "auth:setup": "playwright test playwright/auth/auth.setup.ts --project=setup",
+  "report:allure:generate": "allure generate ./allure-results --clean -o ./allure-report",
+  "report:allure:open": "allure open ./allure-report"
+}
+  }
+
